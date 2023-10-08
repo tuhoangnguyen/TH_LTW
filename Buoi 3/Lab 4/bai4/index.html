@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #w3review {
+            margin: 40px 3px 12px;
+        }
+
+        #text_field {
+            margin-bottom: 12px;
+        }
+
+        #submit {
+            margin-top: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <textarea id="w3review" rows="4" cols="50">
+       Lê Thanh Tú đã mua 1 con pc 17 củ và tặng con laptop cho bạn Nguyễn Hoàng Tú.
+
+    </textarea>
+    <br>
+    <input type="text" name="" id="text_field"> <br>
+    <span id="result"></span> <br>
+    <button id="submit" onclick="calculate()">Submit</button>
+
+    <script>
+        function calculate() {
+            content = document.getElementById("text_field").value;
+            areaContent = document.getElementById("w3review").value;
+            // areaContent = areaContent.replace('.','');
+            areaContent = areaContent.trim();
+            result = document.getElementById("result");
+
+            var count = 0;
+           while(areaContent.toLowerCase().includes(content.toLowerCase())) {
+                    var index = areaContent.indexOf(content);
+                    areaContent = areaContent.slice(index + content.length);
+                    count++;
+                    console.log(areaContent);
+                    result.innerHTML = count;
+                 
+                
+            }
+            result.innerHTML = count;
+            
+        }
+    </script>
+</body>
+
+</html>
