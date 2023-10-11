@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 7</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        #button_number {
+            padding: 12px;
+            background-color: gray;
+            margin: auto;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+
+    <script>
+        $(function () {
+            var start = 1;
+            for (var i = 1; i <= 64; i++) {
+                $('div').add('<button id="button_number"></button>').appendTo('body').val(i).text(i);
+            }
+            $('button').click(function () {
+
+                var number = parseInt($(this).val());
+                console.log(start)
+                if (number === start) {
+                    start++;
+                } else {
+                    $(this).css('background', 'white');
+                    $(this).css('color', 'white');
+                    $(this).css('border', 'none');
+                    $(this).prop('disabled', true);
+                    alert("Wrong button clicked!");
+                }
+
+            });
+
+
+        });
+    </script>
+</body>
+
+</html>

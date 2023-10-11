@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1 id="hello" style="color: red;" onmouseover="hover()">Hover me</h1>
 
@@ -14,6 +16,15 @@
             hello.innerHTML = "Chào mừng bạn đến với website của chúng tôi";
             hello.style.color = "green";
         }
+
+        var array = ['hello', 'hi', "Chào mừng bạn đến với website của chúng tôi", 'xin chào', 'cảm ơn đã đến với chúng tôi'];
+
+
+        alert(array[Math.floor(Math.random() * 4) + 1]);
+
+
+
     </script>
 </body>
+
 </html>
